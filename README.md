@@ -9,7 +9,7 @@
 
 - 🌱 I’m currently learning **React contextAPI**
 
-- 👨‍💻 All of my projects are available at [https://scriblet.github.io/Portfolio/](https://scriblet.github.io/Portfolio/)
+- 👨‍💻 Some of my projects are available at [https://scriblet.github.io/Portfolio/](https://scriblet.github.io/Portfolio/)
 
 - 💬 Ask me about **react, css, design**
 
