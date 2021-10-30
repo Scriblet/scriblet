@@ -11,7 +11,7 @@
 
 - 🤝 I’m looking for help with **C# and .NET**
 
-- 👨‍💻 All of my projects are available at [http://lucasnonato.me/Portfolio/](http://lucasnonato.me/Portfolio/)
+- 👨‍💻 All of my projects are available at [http://lucasnonato.me/Portfolio/](https://scriblet.netlify.app)
 
 - 💬 Ask me about **react, redux, contextAPI, Jest, RTL, css, design**
 
