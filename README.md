@@ -5,11 +5,11 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=scriblet" alt="scriblet" /></a> </p>
 
-- 🔭 I’m currently working on [Arco Educação - Escola Em Movimento](https://escolaemmovimento.com.br)
+- 🔭 I’m currently working on [ThoughtWorks](https://www.thoughtworks.com/)
 
-- 🌱 I’m currently learning **C#**
+- 🌱 I’m currently learning **TypeScript**
 
-- 🤝 I’m looking for help with **C# and .NET**
+- 🤝 I’m looking for help with **OOP and TypeScript**
 
 - 👨‍💻 All of my projects are available at [http://lucasnonato.me/Portfolio/](https://scriblet.netlify.app)
 
