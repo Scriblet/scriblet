@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=scriblet" alt="scriblet" /></a> </p>
 
-- 🔭 I’m currently working on [Porto Seguro] (https://www.portoseguro.com.br/)company
+- 🔭 I’m currently working on [Porto Seguro](https://www.portoseguro.com.br/) company
 
 - 🌱 I’m currently learning **Angular, Java and Artificial Intelligence**
 
