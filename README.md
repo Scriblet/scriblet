@@ -2,8 +2,7 @@
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/header-dark.svg">
     <img alt="Lucas Nonato, AI Consultant and Software Engineer. Turning AI into products people actually use." src="./assets/header-light.svg" width="100%">
-  </picture>
-</a>
+  </picture></a>
 
 <p align="center">
   <picture>
@@ -62,13 +61,10 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-ervas-dark.svg">
       <img alt="Ervas Sagradas: digital encyclopedia of 71 sacred herbs of Umbanda and Afro-Brazilian traditions. React, Vite, Tailwind, Vercel." src="./assets/project-ervas-light.svg" width="49%">
-    </picture>
-  </a><a href="https://github.com/Scriblet/portfolio-2025">
-    <picture>
+    </picture></a><a href="https://github.com/Scriblet/portfolio-2025"><picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-portfolio-dark.svg">
       <img alt="Portfolio 2025: open source personal site with the Mata e mar design system. React 19, TypeScript, MUI, Vitest, Cypress." src="./assets/project-portfolio-light.svg" width="49%">
-    </picture>
-  </a>
+    </picture></a>
 </p>
 
 ## Career
@@ -120,7 +116,6 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/footer-dark.svg">
     <img alt="Thanks for stopping by." src="./assets/footer-light.svg" width="100%">
-  </picture>
-</a>
+  </picture></a>
 
 <p align="center"><img alt="Profile views" src="https://komarev.com/ghpvc/?username=scriblet&label=profile%20views&color=203d22&style=flat-square"></p>
