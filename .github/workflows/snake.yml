@@ -5,7 +5,7 @@ on:
     - cron: "0 6 * * *"
   workflow_dispatch:
   push:
-    branches: [main, devin/1794783432-readme-redesign]
+    branches: [main]
 
 permissions:
   contents: write
