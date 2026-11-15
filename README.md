@@ -57,8 +57,7 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
 ## Featured work
 
 <p align="center">
-  <a href="https://www.ervassagradas.com/">
-    <picture>
+  <a href="https://www.ervassagradas.com/"><picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-ervas-dark.svg">
       <img alt="Ervas Sagradas: digital encyclopedia of 71 sacred herbs of Umbanda and Afro-Brazilian traditions. React, Vite, Tailwind, Vercel." src="./assets/project-ervas-light.svg" width="49%">
     </picture></a><a href="https://github.com/Scriblet/portfolio-2025"><picture>
