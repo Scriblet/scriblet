@@ -63,8 +63,7 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-ervas-dark.svg">
       <img alt="Ervas Sagradas: digital encyclopedia of 71 sacred herbs of Umbanda and Afro-Brazilian traditions. React, Vite, Tailwind, Vercel." src="./assets/project-ervas-light.svg" width="49%">
     </picture>
-  </a>
-  <a href="https://github.com/Scriblet/portfolio-2025">
+  </a><a href="https://github.com/Scriblet/portfolio-2025">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="./assets/project-portfolio-dark.svg">
       <img alt="Portfolio 2025: open source personal site with the Mata e mar design system. React 19, TypeScript, MUI, Vitest, Cypress." src="./assets/project-portfolio-light.svg" width="49%">
@@ -89,10 +88,10 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
     <td align="center" width="25%"><b>Cloud and delivery</b></td>
   </tr>
   <tr>
-    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?perline=8&theme=dark&i=ts,react,nextjs,angular,vite,tailwind,materialui,sass&perline=4"><img alt="TypeScript, React, Next.js, Angular, Vite, Tailwind, Material UI, Sass" src="https://skillicons.dev/icons?perline=8&theme=light&i=ts,react,nextjs,angular,vite,tailwind,materialui,sass&perline=4"></picture></td>
-    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?perline=8&theme=dark&i=nodejs,py,graphql,postgres,mongodb,cs,dotnet&perline=4"><img alt="Node.js, Python, GraphQL, PostgreSQL, MongoDB, C#, .NET" src="https://skillicons.dev/icons?perline=8&theme=light&i=nodejs,py,graphql,postgres,mongodb,cs,dotnet&perline=4"></picture></td>
-    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?perline=8&theme=dark&i=jest,vitest,cypress,figma&perline=4"><img alt="Jest, Vitest, Cypress, Figma" src="https://skillicons.dev/icons?perline=8&theme=light&i=jest,vitest,cypress,figma&perline=4"></picture></td>
-    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?perline=8&theme=dark&i=aws,docker,githubactions,vercel,netlify,linux,git&perline=4"><img alt="AWS, Docker, GitHub Actions, Vercel, Netlify, Linux, Git" src="https://skillicons.dev/icons?perline=8&theme=light&i=aws,docker,githubactions,vercel,netlify,linux,git&perline=4"></picture></td>
+    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&i=ts%2Creact%2Cnextjs%2Cangular%2Cvite%2Ctailwind%2Cmaterialui%2Csass&perline=4"><img alt="TypeScript, React, Next.js, Angular, Vite, Tailwind, Material UI, Sass" src="https://skillicons.dev/icons?theme=light&i=ts%2Creact%2Cnextjs%2Cangular%2Cvite%2Ctailwind%2Cmaterialui%2Csass&perline=4"></picture></td>
+    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&i=nodejs%2Cpy%2Cgraphql%2Cpostgres%2Cmongodb%2Ccs%2Cdotnet&perline=4"><img alt="Node.js, Python, GraphQL, PostgreSQL, MongoDB, C#, .NET" src="https://skillicons.dev/icons?theme=light&i=nodejs%2Cpy%2Cgraphql%2Cpostgres%2Cmongodb%2Ccs%2Cdotnet&perline=4"></picture></td>
+    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&i=jest%2Cvitest%2Ccypress%2Cfigma&perline=4"><img alt="Jest, Vitest, Cypress, Figma" src="https://skillicons.dev/icons?theme=light&i=jest%2Cvitest%2Ccypress%2Cfigma&perline=4"></picture></td>
+    <td align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&i=aws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit&perline=4"><img alt="AWS, Docker, GitHub Actions, Vercel, Netlify, Linux, Git" src="https://skillicons.dev/icons?theme=light&i=aws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit&perline=4"></picture></td>
   </tr>
 </table>
 
@@ -102,8 +101,8 @@ I'm an **AI Consultant and Software Engineer** from São Paulo with 7+ years shi
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=scriblet&border_radius=24&card_width=495&background=08120C&border=203D22&stroke=203D22&ring=8FCA7F&fire=E0A85A&currStreakNum=EBEFE6&sideNums=EBEFE6&currStreakLabel=8FCA7F&sideLabels=B9C4B3&dates=8F9D8D">
-    <img alt="Lucas Nonato's GitHub contribution streak" src="https://streak-stats.demolab.com/?user=scriblet&border_radius=24&card_width=495&background=FAF9F6&border=DAD7CF&stroke=DAD7CF&ring=163F66&fire=4D6577&currStreakNum=10202B&sideNums=10202B&currStreakLabel=163F66&sideLabels=3F4B52&dates=5D6A72" width="49%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=scriblet&disable_animations=true&border_radius=24&card_width=495&background=08120C&border=203D22&stroke=203D22&ring=8FCA7F&fire=E0A85A&currStreakNum=EBEFE6&sideNums=EBEFE6&currStreakLabel=8FCA7F&sideLabels=B9C4B3&dates=8F9D8D">
+    <img alt="Lucas Nonato's GitHub contribution streak" src="https://streak-stats.demolab.com/?user=scriblet&disable_animations=true&border_radius=24&card_width=495&background=FAF9F6&border=DAD7CF&stroke=DAD7CF&ring=163F66&fire=4D6577&currStreakNum=10202B&sideNums=10202B&currStreakLabel=163F66&sideLabels=3F4B52&dates=5D6A72" width="49%">
   </picture>
 </p>
 
