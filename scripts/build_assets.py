@@ -223,14 +223,14 @@ def header(fonts, mode, portrait):
 
 PROJECTS = {
     "ervas": dict(
-        name="Ervas Sagradas", kind="DIGITAL ENCYCLOPEDIA", status="LIVE",
+        name="Ervas Sagradas", kind="DIGITAL ENCYCLOPEDIA",
         tagline="71 sacred herbs of Umbanda and Afro-Brazilian traditions,",
         tagline2="searchable, with ritual uses, baths and safety notes.",
         stack=["React", "Vite", "Tailwind", "Vercel"], url="ervassagradas.com",
         shots={"dark": "ervas.png", "light": "ervas.png"},
     ),
     "portfolio": dict(
-        name="Portfolio 2025", kind="PERSONAL SITE · OPEN SOURCE", status="LIVE",
+        name="Portfolio 2025", kind="PERSONAL SITE · OPEN SOURCE",
         tagline="Mata e mar design system, AI maturity map and",
         tagline2="case studies. WCAG 2.2 AA, PWA, tested end to end.",
         stack=["React 19", "TypeScript", "MUI", "Vitest", "Cypress"], url="lucas-nonato.netlify.app",
@@ -257,8 +257,6 @@ def card(fonts, mode, key, shots):
     doc.add(f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="{t["surface"]}"/>'
             f'<image href="{photo}" x="0" y="0" width="{W}" height="{sh_h}" preserveAspectRatio="xMidYMin slice"/>'
             f'<rect y="0" width="{W}" height="{sh_h}" fill="url(#sf)"/>')
-    pill(doc, W - 96, 22, p["status"], t, size=11, dot="#3fb950" if mode == "dark" else "#1a7f37",
-         fill=t["bg"], color=t["text"], h=30, pad=12)
     y = sh_h + 14
     doc.text(28, y, p["kind"], "mono", 11, t["accent"] if mode == "light" else t["emph"], tracking=0.08)
     doc.text(W - 28, y, p["url"], "mono", 11, t["muted"], anchor="end", tracking=0.02)

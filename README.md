@@ -15,8 +15,7 @@
 <br>
 
 <p align="center">
-  I design and build AI products end to end, from the first UX sketch<br>
-  to LLMs, agents and RAG running in production.
+  I design and build AI products end to end, from the first UX sketch to LLMs, agents and RAG running in production.
 </p>
 
 <p align="center">
