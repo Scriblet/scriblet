@@ -435,6 +435,33 @@ def ai_map(fonts, mode):
     return doc.render(defs)
 
 
+STACK_GROUPS = {
+    "ai": ("01", "AI and conversational"),
+    "media": ("02", "Generative media"),
+    "front": ("03", "Front-end"),
+    "back": ("04", "Back-end and data"),
+    "delivery": ("05", "Quality and delivery"),
+    "product": ("06", "Product and design"),
+}
+
+
+def stack_label(fonts, mode, key):
+    t = THEMES[mode]
+    num, title = STACK_GROUPS[key]
+    label = title.upper()
+    W, H = 640, 56
+    doc = Doc(fonts, W, H, title)
+    size, gap = 22, 22
+    nw = fonts.width("mono", num, size, 0.1)
+    lw = fonts.width("mono", label, size, 0.1)
+    x = (W - nw - gap - lw) / 2
+    y = H / 2 + size * 0.36
+    doc.text(x, y, num, "mono", size, t["accent"], tracking=0.1)
+    doc.add(f'<circle cx="{x + nw + gap / 2:.1f}" cy="{H / 2}" r="3" fill="{t["emph"]}"/>')
+    doc.text(x + nw + gap, y, label, "mono", size, t["text"], tracking=0.1)
+    return doc.render()
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fonts", type=Path,
@@ -453,6 +480,8 @@ def main():
         }
         for key in SECTIONS:
             files[f"h-{key}-{mode}.svg"] = heading(fonts, mode, key)
+        for key in STACK_GROUPS:
+            files[f"s-{key}-{mode}.svg"] = stack_label(fonts, mode, key)
         for i, key in enumerate(LINKS):
             files[f"link-{key}-{mode}.svg"] = link_pill(fonts, mode, key, primary=i == 0)
         for key in PROJECTS:

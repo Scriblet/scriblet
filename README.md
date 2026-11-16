@@ -75,13 +75,107 @@
 </p>
 
 <p align="center">
+  Seven years across UX, front-end, back-end and AI, grouped by where each tool does its job.
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-ai-dark.svg">
+  <img alt="AI and conversational" src="./assets/s-ai-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
+  <code>Python</code> <code>LLM APIs</code> <code>LLM SDKs</code> <code>Gemini</code> <code>Agents</code> <code>Tool calling</code> <code>Multi-agent orchestration</code> <code>CrewAI</code> <code>OpenCode</code> <code>RAG</code> <code>Embeddings</code> <code>Vector stores</code> <code>Evals</code> <code>MLOps</code> <code>WhatsApp</code> <code>RCS</code> <code>Webviews</code>
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-media-dark.svg">
+  <img alt="Generative media" src="./assets/s-media-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
+  <code>fal.ai</code> <code>Flux</code> <code>Image to video</code> <code>ElevenLabs</code> <code>Text to speech</code> <code>FFmpeg</code> <code>Timed captions</code> <code>SQLite FTS5</code>
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-front-dark.svg">
+  <img alt="Front-end" src="./assets/s-front-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&perline=13&i=ts%2Creact%2Cnextjs%2Cangular%2Cvite%2Ctailwind%2Cmaterialui%2Csass%2Cnodejs%2Cpy%2Cgraphql%2Cpostgres%2Cmongodb%2Ccs%2Cdotnet%2Cjest%2Cvitest%2Ccypress%2Cfigma%2Caws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit">
-    <img alt="TypeScript, React, Next.js, Angular, Vite, Tailwind, Material UI, Sass, Node.js, Python, GraphQL, PostgreSQL, MongoDB, C#, .NET, Jest, Vitest, Cypress, Figma, AWS, Docker, GitHub Actions, Vercel, Netlify, Linux, Git" src="https://skillicons.dev/icons?theme=light&perline=13&i=ts%2Creact%2Cnextjs%2Cangular%2Cvite%2Ctailwind%2Cmaterialui%2Csass%2Cnodejs%2Cpy%2Cgraphql%2Cpostgres%2Cmongodb%2Ccs%2Cdotnet%2Cjest%2Cvitest%2Ccypress%2Cfigma%2Caws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit" width="86%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&perline=13&i=ts%2Cjs%2Creact%2Cnextjs%2Cangular%2Credux%2Cmaterialui%2Ctailwind%2Csass%2Cstyledcomponents%2Cvite%2Chtml%2Ccss">
+    <img alt="TypeScript, JavaScript, React, Next.js, Angular, Redux, Material UI, Tailwind, Sass, styled-components, Vite, HTML, CSS" src="https://skillicons.dev/icons?theme=light&perline=13&i=ts%2Cjs%2Creact%2Cnextjs%2Cangular%2Credux%2Cmaterialui%2Ctailwind%2Csass%2Cstyledcomponents%2Cvite%2Chtml%2Ccss" width="86%">
   </picture>
 </p>
 
-<p align="center"><sub>Plus LLM APIs · agents and tool calling · RAG · embeddings and vector stores · evals · MLOps</sub></p>
+<p align="center">
+  <code>RxJS</code> <code>Angular Material</code> <code>Framer Motion</code> <code>Design systems</code> <code>WCAG 2.2 AA</code> <code>PWA</code> <code>i18n</code>
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-back-dark.svg">
+  <img alt="Back-end and data" src="./assets/s-back-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&perline=13&i=nodejs%2Cpy%2Cnestjs%2Cexpress%2Cjava%2Cspring%2Ccs%2Cdotnet%2Cgraphql%2Cpostgres%2Cmongodb%2Cmysql%2Csqlite">
+    <img alt="Node.js, Python, NestJS, Express, Java, Spring Boot, C#, .NET, GraphQL, PostgreSQL, MongoDB, MySQL, SQLite" src="https://skillicons.dev/icons?theme=light&perline=13&i=nodejs%2Cpy%2Cnestjs%2Cexpress%2Cjava%2Cspring%2Ccs%2Cdotnet%2Cgraphql%2Cpostgres%2Cmongodb%2Cmysql%2Csqlite" width="79%">
+  </picture>
+</p>
+
+<p align="center">
+  <code>REST APIs</code> <code>ASP.NET MVC</code> <code>TypeORM</code> <code>Sequelize</code> <code>NHibernate</code> <code>Dapper</code> <code>Strapi</code> <code>OAuth2</code> <code>mTLS</code> <code>Clean Architecture</code> <code>C4 Model</code>
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-delivery-dark.svg">
+  <img alt="Quality and delivery" src="./assets/s-delivery-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?theme=dark&perline=13&i=jest%2Cvitest%2Ccypress%2Caws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit">
+    <img alt="Jest, Vitest, Cypress, AWS, Docker, GitHub Actions, Vercel, Netlify, Linux, Git" src="https://skillicons.dev/icons?theme=light&perline=13&i=jest%2Cvitest%2Ccypress%2Caws%2Cdocker%2Cgithubactions%2Cvercel%2Cnetlify%2Clinux%2Cgit" width="66%">
+  </picture>
+</p>
+
+<p align="center">
+  <code>TDD</code> <code>Testing Library</code> <code>axe-core</code> <code>CI/CD</code> <code>Conventional Commits</code> <code>Code review</code>
+</p>
+
+<br>
+
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/s-product-dark.svg">
+  <img alt="Product and design" src="./assets/s-product-light.svg" width="320">
+</picture>
+</p>
+
+<p align="center">
+  <code>Figma</code> <code>UX research</code> <code>Prototyping</code> <code>Sketch</code> <code>User testing</code> <code>Scrum</code> <code>Kanban</code> <code>Product management</code>
+</p>
 
 <br>
 
