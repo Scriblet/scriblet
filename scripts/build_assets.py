@@ -11,8 +11,10 @@ SVGs render with the brand typography inside GitHub's <img> sandbox.
 import argparse
 import base64
 import io
+import json
 import math
 import random
+import re
 from pathlib import Path
 from xml.sax.saxutils import escape
 
@@ -462,13 +464,103 @@ def stack_label(fonts, mode, key):
     return doc.render()
 
 
+SI = "si"
+LU = "lu"
+STACK_CHIPS = {
+    "ai": [("Python", SI, "python"), ("LLM APIs", LU, "brain-circuit"), ("LLM SDKs", LU, "package"),
+           ("Gemini", SI, "googlegemini"), ("Agents", LU, "bot"), ("Tool calling", LU, "wrench"),
+           ("Agent orchestration", LU, "workflow"), ("CrewAI", SI, "crewai"), ("OpenCode", SI, "opencode"),
+           ("RAG", LU, "library"), ("Embeddings", LU, "chart-scatter"), ("Vector stores", LU, "database"),
+           ("Evals", LU, "flask-conical"), ("MLOps", LU, "activity"), ("WhatsApp", SI, "whatsapp"),
+           ("RCS", SI, "googlemessages"), ("Webviews", LU, "app-window")],
+    "media": [("fal.ai", LU, "sparkles"), ("Flux", LU, "image"), ("Image to video", LU, "clapperboard"),
+              ("ElevenLabs", SI, "elevenlabs"), ("Text to speech", LU, "audio-lines"), ("FFmpeg", SI, "ffmpeg"),
+              ("Timed captions", LU, "captions"), ("SQLite FTS5", SI, "sqlite")],
+    "front": [("RxJS", SI, "reactivex"), ("Angular Material", SI, "angular"), ("Framer Motion", SI, "framer"),
+              ("Design systems", LU, "component"), ("WCAG 2.2 AA", LU, "accessibility"), ("PWA", SI, "pwa"),
+              ("i18n", SI, "i18next")],
+    "back": [("REST APIs", LU, "plug"), ("ASP.NET MVC", SI, "dotnet"), ("TypeORM", SI, "typeorm"),
+             ("Sequelize", SI, "sequelize"), ("NHibernate", LU, "database"), ("Dapper", LU, "database"),
+             ("Strapi", SI, "strapi"), ("OAuth2", LU, "key-round"), ("mTLS", LU, "shield-check"),
+             ("Clean Architecture", LU, "layers"), ("C4 Model", LU, "boxes")],
+    "delivery": [("TDD", LU, "test-tube-diagonal"), ("Testing Library", SI, "testinglibrary"),
+                 ("axe-core", LU, "scan-eye"), ("CI/CD", LU, "infinity"),
+                 ("Conventional Commits", SI, "conventionalcommits"), ("Code review", LU, "git-pull-request")],
+    "product": [("Figma", SI, "figma"), ("UX research", LU, "search"), ("Prototyping", LU, "pen-tool"),
+                ("Sketch", SI, "sketch"), ("User testing", LU, "users"), ("Scrum", LU, "repeat"),
+                ("Kanban", LU, "square-kanban"), ("Product management", LU, "target")],
+}
+
+
+def chip_slug(label):
+    return re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+
+
+def luminance(h):
+    def ch(c):
+        c /= 255
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = hex_rgb(h)
+    return 0.2126 * ch(r) + 0.7152 * ch(g) + 0.0722 * ch(b)
+
+
+def contrast(a, b):
+    la, lb = sorted((luminance(a), luminance(b)), reverse=True)
+    return (la + 0.05) / (lb + 0.05)
+
+
+class Icons:
+    def __init__(self, simple: Path, lucide: Path):
+        self.simple, self.lucide = simple, lucide
+        data = json.loads((simple / "data/simple-icons.json").read_text())
+        self.hex = {i.get("slug") or i["title"].lower(): i["hex"] for i in data}
+
+    def node(self, kind, name, color_for):
+        if kind == SI:
+            svg = (self.simple / "icons" / f"{name}.svg").read_text()
+            d = re.search(r' d="([^"]+)"', svg).group(1)
+            return f'<path d="{d}" fill="{color_for("#" + self.hex[name])}"/>'
+        svg = (self.lucide / f"{name}.svg").read_text()
+        body = re.search(r">\s*(<(?:path|rect|circle|line|polyline|polygon|ellipse).*)</svg>", svg, re.S).group(1)
+        body = re.sub(r"\s+", " ", body).strip()
+        return (f'<g fill="none" stroke="{color_for(None)}" stroke-width="2" stroke-linecap="round" '
+                f'stroke-linejoin="round">{body}</g>')
+
+
+def stack_chip(fonts, icons, mode, label, kind, name):
+    t = THEMES[mode]
+    size, icon, pad, gap, mx, my, h = 13, 16, 14, 9, 3, 5, 36
+
+    def color_for(brand):
+        if brand is None:
+            return t["accent"]
+        return brand if contrast(brand, t["surface"]) >= 2.4 else t["text"]
+
+    tw = fonts.width("mono", label, size, 0.02)
+    W = round(mx * 2 + pad + icon + gap + tw + pad + 2)
+    H = h + my * 2
+    doc = Doc(fonts, W, H, label)
+    doc.add(f'<rect x="{mx + 0.5}" y="{my + 0.5}" width="{W - mx * 2 - 1}" height="{h - 1}" rx="{h / 2 - 0.5}" '
+            f'fill="{t["surface"]}" stroke="{t["border"]}" stroke-opacity="{t["border_op"] + 0.04}"/>')
+    ix, iy = mx + pad, my + (h - icon) / 2
+    doc.add(f'<g transform="translate({ix},{iy}) scale({icon / 24})">{icons.node(kind, name, color_for)}</g>')
+    doc.text(ix + icon + gap, my + h / 2 + size * 0.36, label, "mono", size, t["text"], tracking=0.02)
+    return doc.render(), W, H
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--fonts", type=Path,
                     default=Path.home() / "repos/portfolio-2025/node_modules/@fontsource-variable")
     ap.add_argument("--shots", type=Path, default=Path.home() / "work")
+    ap.add_argument("--simple-icons", type=Path,
+                    default=Path.home() / "repos/portfolio-2025/node_modules/simple-icons")
+    ap.add_argument("--lucide", type=Path,
+                    default=Path.home() / "work/icons/node_modules/lucide-static/icons")
     args = ap.parse_args()
     fonts = Fonts(args.fonts)
+    icons = Icons(args.simple_icons, args.lucide)
+    (OUT / "chips").mkdir(parents=True, exist_ok=True)
     portrait = Image.open(args.shots / "portrait.jpg").convert("RGB")
     OUT.mkdir(exist_ok=True)
     for mode in THEMES:
@@ -482,6 +574,10 @@ def main():
             files[f"h-{key}-{mode}.svg"] = heading(fonts, mode, key)
         for key in STACK_GROUPS:
             files[f"s-{key}-{mode}.svg"] = stack_label(fonts, mode, key)
+        for chips in STACK_CHIPS.values():
+            for label, kind, name in chips:
+                svg, _, _ = stack_chip(fonts, icons, mode, label, kind, name)
+                files[f"chips/{chip_slug(label)}-{mode}.svg"] = svg
         for i, key in enumerate(LINKS):
             files[f"link-{key}-{mode}.svg"] = link_pill(fonts, mode, key, primary=i == 0)
         for key in PROJECTS:
