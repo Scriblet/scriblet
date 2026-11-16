@@ -88,7 +88,7 @@
 </p>
 
 <p align="center">
-  <code>Python</code> <code>LLM APIs</code> <code>LLM SDKs</code> <code>Gemini</code> <code>Agents</code> <code>Tool calling</code> <code>Multi-agent orchestration</code> <code>CrewAI</code> <code>OpenCode</code> <code>RAG</code> <code>Embeddings</code> <code>Vector stores</code> <code>Evals</code> <code>MLOps</code> <code>WhatsApp</code> <code>RCS</code> <code>Webviews</code>
+  <code>Python</code> <code>LLM&nbsp;APIs</code> <code>LLM&nbsp;SDKs</code> <code>Gemini</code> <code>Agents</code> <code>Tool&nbsp;calling</code> <code>Agent&nbsp;orchestration</code> <code>CrewAI</code> <code>OpenCode</code> <code>RAG</code> <code>Embeddings</code> <code>Vector&nbsp;stores</code> <code>Evals</code> <code>MLOps</code> <code>WhatsApp</code> <code>RCS</code> <code>Webviews</code>
 </p>
 
 <br>
@@ -101,7 +101,7 @@
 </p>
 
 <p align="center">
-  <code>fal.ai</code> <code>Flux</code> <code>Image to video</code> <code>ElevenLabs</code> <code>Text to speech</code> <code>FFmpeg</code> <code>Timed captions</code> <code>SQLite FTS5</code>
+  <code>fal.ai</code> <code>Flux</code> <code>Image&nbsp;to&nbsp;video</code> <code>ElevenLabs</code> <code>Text&nbsp;to&nbsp;speech</code> <code>FFmpeg</code> <code>Timed&nbsp;captions</code> <code>SQLite&nbsp;FTS5</code>
 </p>
 
 <br>
@@ -121,7 +121,7 @@
 </p>
 
 <p align="center">
-  <code>RxJS</code> <code>Angular Material</code> <code>Framer Motion</code> <code>Design systems</code> <code>WCAG 2.2 AA</code> <code>PWA</code> <code>i18n</code>
+  <code>RxJS</code> <code>Angular&nbsp;Material</code> <code>Framer&nbsp;Motion</code> <code>Design&nbsp;systems</code> <code>WCAG&nbsp;2.2&nbsp;AA</code> <code>PWA</code> <code>i18n</code>
 </p>
 
 <br>
@@ -141,7 +141,7 @@
 </p>
 
 <p align="center">
-  <code>REST APIs</code> <code>ASP.NET MVC</code> <code>TypeORM</code> <code>Sequelize</code> <code>NHibernate</code> <code>Dapper</code> <code>Strapi</code> <code>OAuth2</code> <code>mTLS</code> <code>Clean Architecture</code> <code>C4 Model</code>
+  <code>REST&nbsp;APIs</code> <code>ASP.NET&nbsp;MVC</code> <code>TypeORM</code> <code>Sequelize</code> <code>NHibernate</code> <code>Dapper</code> <code>Strapi</code> <code>OAuth2</code> <code>mTLS</code> <code>Clean&nbsp;Architecture</code> <code>C4&nbsp;Model</code>
 </p>
 
 <br>
@@ -161,7 +161,7 @@
 </p>
 
 <p align="center">
-  <code>TDD</code> <code>Testing Library</code> <code>axe-core</code> <code>CI/CD</code> <code>Conventional Commits</code> <code>Code review</code>
+  <code>TDD</code> <code>Testing&nbsp;Library</code> <code>axe-core</code> <code>CI/CD</code> <code>Conventional&nbsp;Commits</code> <code>Code&nbsp;review</code>
 </p>
 
 <br>
@@ -174,7 +174,7 @@
 </p>
 
 <p align="center">
-  <code>Figma</code> <code>UX research</code> <code>Prototyping</code> <code>Sketch</code> <code>User testing</code> <code>Scrum</code> <code>Kanban</code> <code>Product management</code>
+  <code>Figma</code> <code>UX&nbsp;research</code> <code>Prototyping</code> <code>Sketch</code> <code>User&nbsp;testing</code> <code>Scrum</code> <code>Kanban</code> <code>Product&nbsp;management</code>
 </p>
 
 <br>
