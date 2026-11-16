@@ -205,24 +205,17 @@ def header(fonts, mode, portrait):
             f'<rect width="{W}" height="{H}" fill="url(#glow)"/>')
     doc.add(f'<g mask="url(#pm2)"><image href="{photo}" x="{W - pw}" y="0" width="{pw}" height="{ph}" '
             f'mask="url(#pm)" preserveAspectRatio="xMidYMid slice"/></g>')
-    doc.add(f'<g opacity=".9">{flow_lines(t, W + 60, H, 14, 300, 46, 7)}</g>')
+    doc.add(f'<g opacity=".75">{flow_lines(t, W + 60, H, 12, 330, 40, 7)}</g>')
     doc.add(particles(t, W, H, 46, 3, x0=420))
-    x = 64
-    doc.add('<g class="in d1">')
-    pill(doc, x, 58, "AI CONSULTANT · SOFTWARE ENGINEER", t, size=12, dot=t["accent"])
-    doc.add('</g><g class="in d2">')
-    doc.text(x - 4, 186, "Lucas Nonato", "display", 96, t["text"], tracking=-0.035)
-    doc.add('</g><g class="in d3">')
-    doc.text(x - 2, 248, "Turning AI into products", "display", 46, t["emph"], tracking=-0.02)
-    doc.text(x - 2, 300, "people actually use.", "display", 46, t["emph"], tracking=-0.02)
-    doc.add('</g><g class="in d4">')
-    doc.text(x, 346, "End-to-end engineer from São Paulo. LLMs, agents and accessible", "body", 20, t["text2"])
-    doc.text(x, 374, "interfaces built with architecture and real results in mind.", "body", 20, t["text2"])
-    doc.add('</g><g class="in d5">')
-    cx = x
-    for label, dot in [("NOW · VIVO, AURA AI PLATFORM", t["emph"]), ("7+ YEARS", None), ("TS · REACT · NODE.JS", None)]:
-        cx += pill(doc, cx, 398, label, t, size=11, dot=dot, h=30, pad=14) + 10
-    doc.add("</g>")
+    x = 72
+    doc.add(f'<circle cx="{x + 5}" cy="104" r="5" fill="{t["accent"]}"/>'
+            f'<circle cx="{x + 5}" cy="104" r="5" fill="none" stroke="{t["accent"]}" class="ping"/>')
+    doc.text(x + 22, 109, "AI CONSULTANT · SOFTWARE ENGINEER", "mono", 13, t["text2"], tracking=0.08)
+    doc.text(x - 4, 212, "Lucas Nonato", "display", 100, t["text"], tracking=-0.035)
+    doc.text(x - 2, 276, "Turning AI into products", "display", 46, t["emph"], tracking=-0.02)
+    doc.text(x - 2, 328, "people actually use.", "display", 46, t["emph"], tracking=-0.02)
+    doc.text(x, 392, "SÃO PAULO   ·   NOW AT VIVO, AURA AI PLATFORM   ·   7+ YEARS", "mono", 12,
+             t["muted"], tracking=0.08)
     doc.add(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="28" fill="none" '
             f'stroke="{t["border"]}" stroke-opacity="{t["border_op"]}"/></g>')
     return doc.render(defs)
@@ -294,13 +287,12 @@ CAREER = [
 
 def timeline(fonts, mode):
     t = THEMES[mode]
-    W, H = 1280, 250
+    W, H = 1280, 230
     doc = Doc(fonts, W, H, "Career: " + "; ".join(f"{c[1]}, {' '.join(c[2])} ({c[0]})" for c in CAREER))
     doc.css.append(BASE_CSS + "@keyframes dash{to{stroke-dashoffset:-40}}.dash{animation:dash 2.4s linear infinite}")
     defs = (f'<linearGradient id="tl" x1="0" x2="1"><stop offset="0" stop-color="{t["emph"]}"/>'
             f'<stop offset=".25" stop-color="{t["accent"]}"/><stop offset="1" stop-color="{t["accent"]}" stop-opacity=".15"/></linearGradient>')
-    doc.add(f'<rect width="{W}" height="{H}" rx="24" fill="{t["bg"]}" stroke="{t["border"]}" stroke-opacity="{t["border_op"]}"/>')
-    line_y = 74
+    line_y = 70
     col = (W - 96) / len(CAREER)
     doc.add(f'<line x1="48" y1="{line_y}" x2="{W - 48}" y2="{line_y}" stroke="url(#tl)" stroke-width="2" '
             f'stroke-dasharray="6 14" class="dash"/>')
@@ -312,10 +304,10 @@ def timeline(fonts, mode):
                 f'<circle cx="{x + 8}" cy="{line_y}" r="3.5" fill="{color}"/>')
         if current:
             doc.add(f'<circle cx="{x + 8}" cy="{line_y}" r="4" fill="none" stroke="{color}" class="ping"/>')
-        doc.text(x, 40, period, "mono", 11, t["muted"], tracking=0.06)
+        doc.text(x, 30, period, "mono", 11, t["muted"], tracking=0.06)
         doc.text(x - 2, 136, company, "display", 34, t["text"], tracking=-0.03)
         for j, r in enumerate(role):
-            doc.text(x, 170 + j * 24, r, "body", 18, t["text2"])
+            doc.text(x, 172 + j * 25, r, "body", 18, t["text2"])
         doc.add("</g>")
     return doc.render(defs)
 
@@ -328,13 +320,120 @@ def footer(fonts, mode):
     defs = (f'<linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{t["bg"]}" stop-opacity="0"/>'
             f'<stop offset="1" stop-color="{t["glow"]}" stop-opacity=".9"/></linearGradient>'
             f'<clipPath id="c"><rect width="{W}" height="{H}" rx="24"/></clipPath>')
-    doc.add(f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="{t["bg"]}"/><rect width="{W}" height="{H}" fill="url(#fg)"/>'
+    doc.add(f'<g clip-path="url(#c)"><rect width="{W}" height="{H}" fill="url(#fg)"/>'
             f'{flow_lines(t, W + 60, H, 10, 70, 22, 11)}{particles(t, W, H, 28, 5)}')
     doc.text(W / 2, 72, "Thanks for stopping by.", "display", 34, t["text"], anchor="middle", tracking=-0.03)
     doc.text(W / 2, 104, "BUILT WITH CARE IN SÃO PAULO · MATA E MAR DESIGN SYSTEM", "mono", 11, t["muted"],
              anchor="middle", tracking=0.08)
-    doc.add(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="24" fill="none" stroke="{t["border"]}" '
-            f'stroke-opacity="{t["border_op"]}"/></g>')
+    doc.add('</g>')
+    return doc.render(defs)
+
+
+def wrap(fonts, key, text, size, max_w):
+    lines, cur = [], ""
+    for word in text.split():
+        trial = f"{cur} {word}".strip()
+        if cur and fonts.width(key, trial, size) > max_w:
+            lines.append(cur)
+            cur = word
+        else:
+            cur = trial
+    return lines + [cur]
+
+
+SECTIONS = {
+    "ai": ("01", "How I work with AI"),
+    "work": ("02", "Featured work"),
+    "career": ("03", "Career"),
+    "stack": ("04", "Stack"),
+    "github": ("05", "On GitHub"),
+}
+
+
+def heading(fonts, mode, key):
+    t = THEMES[mode]
+    num, title = SECTIONS[key]
+    W, H = 800, 132
+    doc = Doc(fonts, W, H, title)
+    defs = (f'<linearGradient id="hl" x1="0" x2="1"><stop offset="0" stop-color="{t["line"]}" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="{t["line"]}" stop-opacity=".55"/></linearGradient>'
+            f'<linearGradient id="hr" x1="1" x2="0"><stop offset="0" stop-color="{t["line"]}" stop-opacity="0"/>'
+            f'<stop offset="1" stop-color="{t["line"]}" stop-opacity=".55"/></linearGradient>')
+    cx = W / 2
+    doc.add(f'<line x1="{cx - 150}" y1="44" x2="{cx - 30}" y2="44" stroke="url(#hl)" stroke-width="1.2"/>'
+            f'<line x1="{cx + 30}" y1="44" x2="{cx + 150}" y2="44" stroke="url(#hr)" stroke-width="1.2"/>')
+    doc.text(cx, 49, num, "mono", 13, t["accent"], anchor="middle", tracking=0.1)
+    doc.text(cx, 108, title, "display", 44, t["text"], anchor="middle", tracking=-0.03)
+    return doc.render(defs)
+
+
+LINKS = {
+    "portfolio": "Portfolio",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+}
+
+
+def link_pill(fonts, mode, key, primary=False):
+    t = THEMES[mode]
+    label = LINKS[key]
+    W, H = 220, 64
+    doc = Doc(fonts, W, H, label)
+    fill = t["accent"] if primary else "none"
+    color = t["bg"] if primary else t["text"]
+    stroke = "" if primary else f' stroke="{t["border"]}" stroke-opacity="{t["border_op"] + 0.12}" stroke-width="1.5"'
+    doc.add(f'<rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="{(H - 4) / 2}" fill="{fill}"{stroke}/>')
+    tw = fonts.width("body", label, 21)
+    gx = (W - tw - 26) / 2
+    doc.text(gx, H / 2 + 7.5, label, "body", 21, color)
+    ax, ay = gx + tw + 14, H / 2 - 6
+    doc.add(f'<path d="M{ax} {ay + 12} L{ax + 12} {ay} M{ax + 3} {ay} H{ax + 12} V{ay + 9}" stroke="{color}" '
+            f'stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>')
+    return doc.render()
+
+
+AI_LAYERS = [
+    ("01", "Product and usage", "AI only matters when it changes someone's work."),
+    ("02", "Model integration", "A good model is one that survives production."),
+    ("03", "Context and RAG", "Good answers start with good context."),
+    ("04", "Agents and orchestration", "An agent is software with tools, not a chatbot with a personality."),
+    ("05", "Operation and governance", "What isn't observed can't be trusted."),
+]
+
+
+def ai_map(fonts, mode):
+    t = THEMES[mode]
+    W, H = 1280, 330
+    doc = Doc(fonts, W, H, "How I work with AI: " + "; ".join(f"{n} {a}: {b}" for n, a, b in AI_LAYERS))
+    doc.css.append(BASE_CSS + "@keyframes dash{to{stroke-dashoffset:-40}}.dash{animation:dash 2.4s linear infinite}")
+    defs = (f'<linearGradient id="al" x1="0" x2="1"><stop offset="0" stop-color="{t["accent"]}" stop-opacity=".15"/>'
+            f'<stop offset=".5" stop-color="{t["accent"]}"/><stop offset="1" stop-color="{t["emph"]}"/></linearGradient>')
+    col = (W - 96) / len(AI_LAYERS)
+    pts = [(48 + col * i + 16, 60 + (10 if i % 2 else -10)) for i in range(len(AI_LAYERS))]
+    d = f"M24 {pts[0][1] + 6}"
+    prev = (24, pts[0][1] + 6)
+    for px, py in pts + [(W - 24, pts[-1][1])]:
+        mx = (prev[0] + px) / 2
+        d += f" C{mx:.1f} {prev[1]:.1f} {mx:.1f} {py:.1f} {px:.1f} {py:.1f}"
+        prev = (px, py)
+    doc.add(f'<path d="{d}" fill="none" stroke="url(#al)" stroke-width="2" stroke-dasharray="6 14" class="dash"/>')
+    for i, (num, title, belief) in enumerate(AI_LAYERS):
+        x = 48 + col * i + 8
+        px, py = pts[i]
+        last = i == len(AI_LAYERS) - 1
+        color = t["emph"] if last else t["accent"]
+        doc.add(f'<circle cx="{px}" cy="{py}" r="9" fill="{t["bg"]}" stroke="{color}" stroke-width="2.5"/>'
+                f'<circle cx="{px}" cy="{py}" r="3.5" fill="{color}"/>')
+        y = 128
+        doc.text(x, y, f"LAYER {num}", "mono", 11, t["muted"], tracking=0.08)
+        y += 40
+        for line in wrap(fonts, "display", title, 28, col - 30):
+            doc.text(x - 1, y, line, "display", 28, t["text"], tracking=-0.025)
+            y += 32
+        y += 6
+        for line in wrap(fonts, "body", belief, 17, col - 34):
+            doc.text(x, y, line, "body", 17, t["text2"])
+            y += 24
     return doc.render(defs)
 
 
@@ -352,7 +451,12 @@ def main():
             f"header-{mode}.svg": header(fonts, mode, portrait),
             f"timeline-{mode}.svg": timeline(fonts, mode),
             f"footer-{mode}.svg": footer(fonts, mode),
+            f"ai-{mode}.svg": ai_map(fonts, mode),
         }
+        for key in SECTIONS:
+            files[f"h-{key}-{mode}.svg"] = heading(fonts, mode, key)
+        for i, key in enumerate(LINKS):
+            files[f"link-{key}-{mode}.svg"] = link_pill(fonts, mode, key, primary=i == 0)
         for key in PROJECTS:
             files[f"project-{key}-{mode}.svg"] = card(fonts, mode, key, args.shots)
         for name, svg in files.items():
