@@ -180,10 +180,10 @@ BASE_CSS = (
 
 def header(fonts, mode, portrait):
     t = THEMES[mode]
-    W, H = 1280, 460
+    W, H = 1280, 600
     doc = Doc(fonts, W, H, "Lucas Nonato, AI Consultant and Software Engineer")
     doc.css.append(BASE_CSS)
-    pw, ph = 600, H
+    pw, ph = 640, H
     src = portrait.copy()
     sw, sh = src.size
     crop_h = int(sw * ph / pw)
@@ -205,16 +205,16 @@ def header(fonts, mode, portrait):
             f'<rect width="{W}" height="{H}" fill="url(#glow)"/>')
     doc.add(f'<g mask="url(#pm2)"><image href="{photo}" x="{W - pw}" y="0" width="{pw}" height="{ph}" '
             f'mask="url(#pm)" preserveAspectRatio="xMidYMid slice"/></g>')
-    doc.add(f'<g opacity=".75">{flow_lines(t, W + 60, H, 12, 330, 40, 7)}</g>')
-    doc.add(particles(t, W, H, 46, 3, x0=420))
+    doc.add(f'<g opacity=".75">{flow_lines(t, W + 60, H, 14, 440, 46, 7)}</g>')
+    doc.add(particles(t, W, H, 56, 3, x0=420))
     x = 72
-    doc.add(f'<circle cx="{x + 5}" cy="104" r="5" fill="{t["accent"]}"/>'
-            f'<circle cx="{x + 5}" cy="104" r="5" fill="none" stroke="{t["accent"]}" class="ping"/>')
-    doc.text(x + 22, 109, "AI CONSULTANT · SOFTWARE ENGINEER", "mono", 13, t["text2"], tracking=0.08)
-    doc.text(x - 4, 212, "Lucas Nonato", "display", 100, t["text"], tracking=-0.035)
-    doc.text(x - 2, 276, "Turning AI into products", "display", 46, t["emph"], tracking=-0.02)
-    doc.text(x - 2, 328, "people actually use.", "display", 46, t["emph"], tracking=-0.02)
-    doc.text(x, 392, "SÃO PAULO   ·   NOW AT VIVO, AURA AI PLATFORM   ·   7+ YEARS", "mono", 12,
+    doc.add(f'<circle cx="{x + 5}" cy="166" r="5" fill="{t["accent"]}"/>'
+            f'<circle cx="{x + 5}" cy="166" r="5" fill="none" stroke="{t["accent"]}" class="ping"/>')
+    doc.text(x + 22, 171, "AI CONSULTANT · SOFTWARE ENGINEER", "mono", 13, t["text2"], tracking=0.08)
+    doc.text(x - 4, 284, "Lucas Nonato", "display", 108, t["text"], tracking=-0.035)
+    doc.text(x - 2, 352, "Turning AI into products", "display", 46, t["emph"], tracking=-0.02)
+    doc.text(x - 2, 406, "people actually use.", "display", 46, t["emph"], tracking=-0.02)
+    doc.text(x, 470, "SÃO PAULO   ·   NOW AT VIVO, AURA AI PLATFORM   ·   7+ YEARS", "mono", 12,
              t["muted"], tracking=0.08)
     doc.add(f'<rect x=".5" y=".5" width="{W - 1}" height="{H - 1}" rx="28" fill="none" '
             f'stroke="{t["border"]}" stroke-opacity="{t["border_op"]}"/></g>')
@@ -230,7 +230,7 @@ PROJECTS = {
         shots={"dark": "ervas.png", "light": "ervas.png"},
     ),
     "portfolio": dict(
-        name="Portfolio 2025", kind="PERSONAL SITE · OPEN SOURCE",
+        name="Portfolio 2025", kind="PERSONAL SITE · DESIGN SYSTEM",
         tagline="Mata e mar design system, AI maturity map and",
         tagline2="case studies. WCAG 2.2 AA, PWA, tested end to end.",
         stack=["React 19", "TypeScript", "MUI", "Vitest", "Cypress"], url="lucas-nonato.netlify.app",

@@ -20,7 +20,7 @@
 
 <p align="center">
   <sub>
-    NOW · building <b>Aura, Vivo's AI platform</b> · running <a href="https://www.ervassagradas.com/">Ervas Sagradas</a> · evolving my <a href="https://github.com/Scriblet/portfolio-2025">open source portfolio</a>
+    NOW · building <b>Aura, Vivo's AI platform</b> · running <a href="https://www.ervassagradas.com/">Ervas Sagradas</a> · evolving my <a href="https://lucas-nonato.netlify.app/">portfolio</a>
   </sub>
 </p>
 
@@ -48,7 +48,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.ervassagradas.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/project-ervas-dark.svg"><img alt="Ervas Sagradas: digital encyclopedia of 71 sacred herbs of Umbanda and Afro-Brazilian traditions. React, Vite, Tailwind, Vercel." src="./assets/project-ervas-light.svg" width="48%"></picture></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/Scriblet/portfolio-2025"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/project-portfolio-dark.svg"><img alt="Portfolio 2025: open source personal site with the Mata e mar design system. React 19, TypeScript, MUI, Vitest, Cypress." src="./assets/project-portfolio-light.svg" width="48%"></picture></a>
+  <a href="https://www.ervassagradas.com/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/project-ervas-dark.svg"><img alt="Ervas Sagradas: digital encyclopedia of 71 sacred herbs of Umbanda and Afro-Brazilian traditions. React, Vite, Tailwind, Vercel." src="./assets/project-ervas-light.svg" width="48%"></picture></a>&nbsp;&nbsp;&nbsp;<a href="https://lucas-nonato.netlify.app/"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/project-portfolio-dark.svg"><img alt="Portfolio 2025: personal site with the Mata e mar design system. React 19, TypeScript, MUI, Vitest, Cypress." src="./assets/project-portfolio-light.svg" width="48%"></picture></a>
 </p>
 
 <br>
